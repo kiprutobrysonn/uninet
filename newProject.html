@@ -11,11 +11,26 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+        :root {
+            --primary-color: #7b3f00;
+            --secondary-color: #d2691e;
+            --background-color: #faf0e6;
+            --text-color: #4d2600;
+        }
+
         .form-container {
             background-color: #f8f9fa;
             border-radius: 10px;
             padding: 30px;
             box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .btn-submit {
@@ -29,16 +44,52 @@
             border-color: #0056b3;
             transform: translateY(-2px);
         }
+
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        header h1 {
+            margin: 0;
+            font-weight: 600;
+            font-size: 2.5rem;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        header nav a:hover {
+            color: var(--secondary-color);
+        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark text-light">
-        <div class="container-fluid">
-            <a class="navbar-brand text-secondary" href="./index.html">Uninet</a>
-            <!-- Add navigation links here if needed -->
-        </div>
-    </nav>
+    <header>
+        <h1>UniNet</h1>
+        <nav>
+            <a href="./index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="./profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a href="./project.html"><i class="fas fa-users"></i> My Projects</a>
+            <a href="./projectList.html"><i class="fas fa-university"></i> All Projects</a>
+            <a href="./newProject.html"><i class="fas fa-plus"></i> New Project</a>
+        </nav>
+    </header>
+
     <div class="container mt-5">
         <h1 class="text-center mb-4">Submit a New Project</h1>
         <div class="row justify-content-center">
@@ -88,25 +139,29 @@
             </div>
         </div>
     </div>
+    <footer>
+        <p>&copy; 2023 UniNet. All rights reserved.</p>
+    </footer>
+</body>
 
-    <script>
-        document.getElementById('projectSubmissionForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            // Here you would typically send the form data to a server
-            // For demonstration, we'll just log the data to the console
-            const formData = {
-                title: document.getElementById('projectTitle').value,
-                description: document.getElementById('projectDescription').value,
-                tags: document.getElementById('projectTags').value.split(',').map(tag => tag.trim()),
-                members: document.getElementById('projectMembers').value.split(',').map(member => member.trim()),
-                status: document.getElementById('projectStatus').value,
-                timeline: document.getElementById('projectTimeline').value
-            };
-            console.log('Project Submission:', formData);
-            alert('Project submitted successfully!');
-            this.reset();
-        });
-    </script>
+<script>
+    document.getElementById('projectSubmissionForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        // Here you would typically send the form data to a server
+        // For demonstration, we'll just log the data to the console
+        const formData = {
+            title: document.getElementById('projectTitle').value,
+            description: document.getElementById('projectDescription').value,
+            tags: document.getElementById('projectTags').value.split(',').map(tag => tag.trim()),
+            members: document.getElementById('projectMembers').value.split(',').map(member => member.trim()),
+            status: document.getElementById('projectStatus').value,
+            timeline: document.getElementById('projectTimeline').value
+        };
+        console.log('Project Submission:', formData);
+        alert('Project submitted successfully!');
+        this.reset();
+    });
+</script>
 </body>
 
 </html>
