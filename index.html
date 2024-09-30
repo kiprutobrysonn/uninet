@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to UniNet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Chocolate theme colors */
+        :root {
+            --primary-color: #7b3f00;
+            --secondary-color: #d2691e;
+            --background-color: #faf0e6;
+            --text-color: #4d2600;
+        }
+
+        /* General styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header styles */
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        header h1 {
+            margin: 0;
+            font-weight: 600;
+            font-size: 2.5rem;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        header nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Hero section */
+        .hero {
+            background-image: url('./cambridge.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            color: black;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* Main content styles */
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .news-feed {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .news-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .news-item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .news-item h3 {
+            margin-top: 0;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>UniNet</h1>
+        <nav>
+            <a href="./index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="./profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a href="./project.html"><i class="fas fa-users"></i> My Projects</a>
+            <a href="./projectList.html"><i class="fas fa-university"></i> All Projects</a>
+            <a href="./newProject.html"><i class="fas fa-plus"></i> New Project</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <p>Connect, collaborate, and innovate with students and researchers from around the world.</p>
+
+        <h2>Welcome to UniNet</h2>
+        <a href="#" class="cta-button">Join Now</a>
+    </section>
+
+    <main>
+        <h2>University News and Events</h2>
+        <div class="news-feed">
+            <div class="news-item">
+                <h3>Upcoming Workshop: Introduction to Machine Learning</h3>
+                <p>Join us for a hands-on workshop exploring the fundamentals of machine learning. Learn about
+                    supervised and unsupervised learning algorithms, and their applications in various fields.</p>
+            </div>
+            <div class="news-item">
+                <h3>Campus Career Fair: Meet with Top Employers</h3>
+                <p>Don't miss this opportunity to network with leading companies and explore internship and job
+                    opportunities. Bring your resume and dress professionally.</p>
+            </div>
+            <div class="news-item">
+                <h3>New Research Lab Opening: Robotics and Automation</h3>
+                <p>Our university is excited to announce the opening of a state-of-the-art research lab focused on
+                    robotics and automation. Stay tuned for upcoming events and research opportunities.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 UniNet. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

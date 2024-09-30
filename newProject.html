@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Project - ProjectHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .form-container {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-submit {
+            background-color: #007bff;
+            border-color: #007bff;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark text-light">
+        <div class="container-fluid">
+            <a class="navbar-brand text-secondary" href="./index.html">Uninet</a>
+            <!-- Add navigation links here if needed -->
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Submit a New Project</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="form-container">
+                    <form id="projectSubmissionForm">
+                        <div class="mb-3">
+                            <label for="projectTitle" class="form-label">Project Title</label>
+                            <input type="text" class="form-control" id="projectTitle" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="projectDescription" class="form-label">Project Description</label>
+                            <textarea class="form-control" id="projectDescription" rows="4" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="projectTags" class="form-label">Project Tags (comma-separated)</label>
+                            <input type="text" class="form-control" id="projectTags"
+                                placeholder="e.g., AI, Machine Learning, Data Science">
+                        </div>
+                        <div class="mb-3">
+                            <label for="projectMembers" class="form-label">Initial Team Members
+                                (comma-separated)</label>
+                            <input type="text" class="form-control" id="projectMembers"
+                                placeholder="e.g., John Doe, Jane Smith">
+                        </div>
+                        <div class="mb-3">
+                            <label for="projectStatus" class="form-label">Project Status</label>
+                            <select class="form-select" id="projectStatus" required>
+                                <option value="">Select status</option>
+                                <option value="planning">Planning</option>
+                                <option value="inProgress">In Progress</option>
+                                <option value="completed">Completed</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="projectTimeline" class="form-label">Estimated Timeline</label>
+                            <input type="text" class="form-control" id="projectTimeline"
+                                placeholder="e.g., 3 months, 1 year">
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg btn-submit">
+                                <i class="fas fa-paper-plane me-2"></i>Submit Project
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('projectSubmissionForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Here you would typically send the form data to a server
+            // For demonstration, we'll just log the data to the console
+            const formData = {
+                title: document.getElementById('projectTitle').value,
+                description: document.getElementById('projectDescription').value,
+                tags: document.getElementById('projectTags').value.split(',').map(tag => tag.trim()),
+                members: document.getElementById('projectMembers').value.split(',').map(member => member.trim()),
+                status: document.getElementById('projectStatus').value,
+                timeline: document.getElementById('projectTimeline').value
+            };
+            console.log('Project Submission:', formData);
+            alert('Project submitted successfully!');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

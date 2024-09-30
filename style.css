@@ -1,0 +1,286 @@
+#discoverPage {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#searchInput {
+  flex-grow: 1;
+  padding: 8px;
+  font-size: 16px;
+}
+
+#searchBtn {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.suggestions-container,
+.search-results-container {
+  margin-bottom: 20px;
+}
+
+#suggestedConnections,
+#searchResults {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.connection-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.connection-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+#projectPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-info {
+  display: flex;
+  align-items: center;
+}
+
+.project-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.btn {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.project-content {
+  display: flex;
+  gap: 20px;
+}
+
+.project-feed {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.create-post {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#postInput {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  resize: none;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+.feed {
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #f0f2f5;
+  border-radius: 8px;
+}
+
+.post {
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post-author-info {
+  margin-left: 10px;
+}
+
+.post-author {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.post-time {
+  font-size: 12px;
+  color: #777;
+}
+
+.post-content {
+  margin-bottom: 10px;
+}
+
+.post-actions {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.btn-action {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #777;
+  margin-right: 10px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-action:hover {
+  background-color: #f0f2f5;
+}
+
+.btn-action i {
+  margin-right: 5px;
+}
+
+.comment-section {
+  margin-top: 10px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.comments {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.comment .user-avatar {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.comment-text {
+  flex: 1;
+}
+
+.new-comment {
+  display: flex;
+  margin-top: 10px;
+}
+
+.comment-input {
+  flex-grow: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.post-comment-btn {
+  margin-left: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.project-sidebar {
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.team-members,
+.project-progress,
+.current-work {
+  margin-bottom: 20px;
+  background-color: #f0f2f5;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.team-member .user-avatar {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 4px;
+}
+
+.progress-value {
+  height: 100%;
+  background-color: #1877f2;
+  border-radius: 4px;
+}

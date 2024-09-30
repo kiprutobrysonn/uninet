@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project List - ProjectHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .project-card {
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+        :root {
+            --primary-color: #7b3f00;
+            --secondary-color: #d2691e;
+            --background-color: #faf0e6;
+            --text-color: #4d2600;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        header h1 {
+            margin: 0;
+            font-weight: 600;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        header nav a:hover {
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="./index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="./profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a href="./project.html"><i class="fas fa-users"></i>My Projects</a>
+            <a href="./projectList.html"><i class="fas fa-university"></i> All projects</a>
+            <a href="./newProject.html">New Project</a>
+        </nav>
+    </header>
+    <div class="container mt-4">
+        <h1 class="mb-4">Public Projects</h1>
+        <div id="project-list" class="row">
+        </div>
+    </div>
+    <script>
+        const dummyProjects = [
+            {
+                title: "Project 1",
+                description:
+                    "Description for Project 1. This project aims to explore new frontiers in machine learning and artificial intelligence.",
+                tags: ["AI", "Machine Learning", "Deep Learning"],
+                members: ["John Doe", "Jane Smith", "Bob Johnson"],
+            },
+            {
+                title: "Project 2",
+                description:
+                    "Description for Project 2. A collaborative effort to develop a sustainable energy solution for rural areas.",
+                tags: ["Sustainability", "Energy", "Environment"],
+                members: ["Alice Williams", "Tom Davis", "Emily Brown"],
+            },
+            {
+                title: "Project 3",
+                description:
+                    "Description for Project 3. Investigating the impact of social media on mental health and well-being.",
+                tags: ["Psychology", "Social Media", "Mental Health"],
+                members: ["David Wilson", "Sophia Thompson", "Michael Taylor"],
+            },
+            // Add more dummy projects as needed
+        ];
+
+        // Function to generate project cards and append them to the project list
+        function generateProjectCards(projects) {
+            const projectListContainer = document.getElementById("project-list");
+            projects.forEach((project) => {
+                const projectItem = document.createElement("div");
+                projectItem.classList.add("col-md-4", "mb-3");
+                projectItem.innerHTML = `
+            <div class="card project-card">
+              <div class="card-body">
+                <h5 class="card-title">${project.title}</h5>
+                <p class="card-text">${project.description}</p>
+                <div class="tags mb-2">
+                  ${project.tags
+                        .map((tag) => `<span class="badge bg-secondary me-1">${tag}</span>`)
+                        .join("")}
+                </div>
+                <div class="members mb-2">
+                  <i class="fas fa-users me-2"></i>
+                  ${project.members.join(", ")}
+                </div>
+                <div class="d-flex justify-content-end">
+                  <button class="btn btn-primary btn-sm">
+                    Join Project
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+                projectListContainer.appendChild(projectItem);
+            });
+        }
+
+        // Simulate loading dummy projects after the page is loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            generateProjectCards(dummyProjects);
+        });
+    </script>
+</body>
+
+</html>

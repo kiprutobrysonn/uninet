@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniNet - Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Chocolate theme colors */
+        :root {
+            --primary-color: #7b3f00;
+            --secondary-color: #d2691e;
+            --background-color: #faf0e6;
+            --text-color: #4d2600;
+        }
+
+        /* General styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        /* Header styles */
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        header h1 {
+            margin: 0;
+            font-weight: 600;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        header nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Main content styles */
+        main {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-header {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+
+        .profile-header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .profile-header h2 {
+            margin-top: 0;
+            font-weight: 600;
+        }
+
+        .profile-header p {
+            margin-bottom: 5px;
+        }
+
+        .profile-details {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .profile-details h3 {
+            margin-top: 0;
+            font-weight: 600;
+        }
+
+        .profile-details p {
+            margin-bottom: 10px;
+        }
+
+        .profile-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .profile-stats div {
+            text-align: center;
+        }
+
+        .profile-stats div h4 {
+            margin-bottom: 5px;
+        }
+
+        .profile-about {
+            margin-bottom: 20px;
+        }
+
+        .profile-interests {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .profile-interests span {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>UniNet</h1>
+        <nav>
+            <a href="./index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="./profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a href="./project.html"><i class="fas fa-users"></i>My Projects</a>
+            <a href="./projectList.html"><i class="fas fa-university"></i> All projects</a>
+            <a href="./newProject.html">New Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="profile-header">
+            <img src="https://via.placeholder.com/150" alt="Profile Picture">
+            <div>
+                <h2>John Doe</h2>
+                <p>Computer Science Student</p>
+                <p>Example University</p>
+            </div>
+        </div>
+
+        <div class="profile-details">
+            <div class="profile-stats">
+                <div>
+                    <h4>100</h4>
+                    <p>Connections</p>
+                </div>
+                <div>
+                    <h4>25</h4>
+                    <p>Posts</p>
+                </div>
+                <div>
+                    <h4>12</h4>
+                    <p>Events</p>
+                </div>
+            </div>
+
+            <div class="profile-about">
+                <h3>About Me</h3>
+                <p>I'm a computer science student passionate about artificial intelligence and machine learning. I love
+                    exploring new technologies and their potential to solve real-world problems.</p>
+            </div>
+
+            <div>
+                <h3>Interests</h3>
+                <div class="profile-interests">
+                    <span>Computer Science</span>
+                    <span>Artificial Intelligence</span>
+                    <span>Machine Learning</span>
+                    <span>Data Analysis</span>
+                    <span>Programming</span>
+                </div>
+            </div>
+
+            <div>
+                <h3>Education</h3>
+                <p>Bachelor of Science in Computer Science</p>
+                <p>Example University, 2020 - Present</p>
+            </div>
+
+            <div>
+                <h3>Projects</h3>
+                <ul>
+                    <li>AI-powered Chatbot for Customer Support</li>
+                    <li>Machine Learning Image Recognition App</li>
+                    <li>Data Visualization Dashboard</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; UniNet 2023</p>
+    </footer>
+</body>
+
+</html>
